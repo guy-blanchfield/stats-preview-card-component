@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- ----- the google fonts routine ----------- -->
+
+    <!-- first the preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- then the preload -->
+    <link
+      link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap"
+    />
+
+    <!-- then the stylesheet setting media to print -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- then the noscript fallback -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap"
+      />
+    </noscript>
+
+    <!-- custom styles -->
+
+    <link rel="stylesheet" href="./styles/jwc-reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- icon link last -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <h1>Frontend Mentor | Stats preview card component</h1>
+
+  <main class="container">
+
+    <section class="stats-preview-card">
+
+      <div class="stats-preview-card-hero">
+        <picture>
+          <source srcset="./images/image-header-desktop.jpg" media="(min-width: 1200px)">
+          <img src="./images/image-header-mobile.jpg" alt="">
+        </picture>
+      </div>
+
+      <div class="stats-preview-card-content">
+
+        <div class="stats-preview-card-text">
+          <h2>Get <em>insights</em> that help your business grow.</h2>
+          <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+            experience, and overall efficiency.</p>
+        </div>
+        
+        <div class="stats-preview-card-stats">
+          <!-- do this as a list bc it probably is semantically speaking -->
+          <!-- then each li can be flex, so we get loads of control over the layout / spacing -->
+          <ul class="stats-preview-card-stats-list">
+            <li class="stats-preview-card-stats-listitem"><span>10k+</span> <span>companies</span></li>
+            <li class="stats-preview-card-stats-listitem"><span>314</span> <span>templates</span></li>
+            <li class="stats-preview-card-stats-listitem"><span>12M+</span> <span>queries</span></li>
+          </ul>
+        </div>
+
+      </div>
+ 
+    </section>
+
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">GRB</a>.
+  </div>
+</body>
+</html>
