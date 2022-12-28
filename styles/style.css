@@ -25,6 +25,7 @@
 body {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
+    font-weight: 400;
     background-color: var(--bg);
     color: var(--text);
 }
@@ -41,33 +42,13 @@ h1 {
 .container {
     display: grid;
     place-content: center;
-    /* padding-top: 32px; */
-    /* dunno if the design spec bg is fixed or not, think it's better fixed */
-    /* background: url(../images/pattern-background-mobile.svg) no-repeat fixed; */
-}
-
-/* keep this media min-width 375, even though all the others */
-/* are at 450, the mobile background svg isn't big enough */
-/* to cover any more than 375 */
-@media (min-width: 375px) {
-    .container {
-        /* dunno if the design spec bg is fixed or not, think it's better fixed */
-        /* background: url(../images/pattern-background-desktop.svg) no-repeat fixed; */
-    }
 }
 
 .stats-preview-card {
     display: flex;
     flex-direction: column;
     width: var(--card-width-mobile);
-    /* big top padding to accommodate the bg image */
-    /* padding-top: 275px; */
     background-color: var(--bg-alt);
-    /* background-color: var(--accent); */
-    /* background-image: url(../images/image-header-mobile.jpg);
-    background-blend-mode: multiply;
-    background-size: contain;
-    background-repeat: no-repeat; */
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -93,7 +74,6 @@ h1 {
         will be displayed after any items that have not been 
         given an explicit order value. */
         order: 1;
-        /* width: 50%; */
         height: auto;
     }
 }
@@ -120,8 +100,6 @@ h1 {
         width: 52%;
         align-items: initial;
         justify-content: space-around;
-        /* no vertical padding - let the justify-content take care of it */ 
-        /* maybe a bit of top, now we're using space-around not center */
         padding: 45px 100px 35px 75px;
     }
 }
@@ -131,7 +109,6 @@ h1 {
     flex-direction: column;
     gap: 15px;
     text-align: center;
-    /* padding: 0 20px; */
 }
 
 @media (min-width: 1200px) {
@@ -160,8 +137,7 @@ h1 {
 }
 
 .stats-preview-card p {
-    /* font-size: 1rem; */
-    color: var(--text-muted2);
+    color: var(--text-muted);
     line-height: 1.5rem;
 }
 
@@ -177,9 +153,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    /* flex-basis: content; */
     padding: 0;
-    /* border: 1px solid magenta; */
 }
 
 @media (min-width: 1200px) {
@@ -194,10 +168,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 2px;
-    /* flex-shrink: 2; */
-    /* flex-basis: fit-content; */
     align-items: center;
-    /* border: 1px solid pink; */
 }
 
 @media (min-width: 1200px) {
@@ -205,12 +176,6 @@ h1 {
         align-items: initial;
     }
 }
-
-.stats-preview-card-stats-listitem span {
-
-}
-
-
 
 .stats-preview-card-stats-listitem span:first-child {
     font-weight: 700;
@@ -225,14 +190,6 @@ h1 {
     font-family: 'Lexend Deca';
     font-weight: 400;
 }
-
-/* .stats-preview-card-stats-listitem span:nth-child(1) {
-    font-weight: 700;
-}
-
-.stats-preview-card-stats-listitem span:nth-child(2) {
-    text-transform: uppercase;
-} */
 
 /* frontend mentor attribution style */
 
