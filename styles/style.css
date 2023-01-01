@@ -18,7 +18,7 @@
     --accent: var(--primary-softviolet);
 
     /* sizes */
-    --card-width-mobile: 330px;
+    --card-width-mobile: min(330px, 88vw);
     --card-width-desktop: 1100px;
 }
 
@@ -58,12 +58,11 @@ h1 {
     .stats-preview-card {
         flex-direction: row;
         width: var(--card-width-desktop);
+        justify-content: space-between;
     }
 }
 
 .stats-preview-card-hero {
-    height: 240px;
-    overflow: hidden;
     background-color: var(--accent);
 }
 
@@ -83,6 +82,10 @@ h1 {
     /* mix-blend-mode alone isn't getting the exact effect */
     /* try some opacity as well */
     opacity: 0.75;
+
+    /* NB there's a max-width: 100% 
+    for img etc in the reset.css */
+
 }
 
 .stats-preview-card-content {
@@ -97,7 +100,7 @@ h1 {
 
 @media (min-width: 1200px) {
     .stats-preview-card-content {
-        width: 52%;
+        flex-basis: 50%;
         align-items: initial;
         justify-content: space-around;
         padding: 45px 100px 35px 75px;
@@ -143,7 +146,8 @@ h1 {
 
 @media (min-width: 1200px) {
     .stats-preview-card p {
-        width: 90%;
+        /*  to limit the line length a bit */
+        padding-right: 30px;
     }   
 }
 
@@ -160,7 +164,8 @@ h1 {
     .stats-preview-card-stats-list {
         flex-direction: row;
         justify-content: space-between;
-        width: 90%;
+        /*  to limit the line length a bit */
+        padding-right: 30px;
     }
 }
 
